@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Portfolio Website</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <script type="module" crossorigin src="/assets/index-7TckY22h.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-mzq-Jm12.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav--bar winky-sans">
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact--me">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main">
+    <section class="main animation" id="animation">
+      <div class="animation">
+        <div class="ball"></div>
+        <div class="shadow"></div>
+      </div>
+    </section>
+    <section class="main home" id="home">
+      <div class="name">
+        <h1 class="winky-sans fade-in">Hey, this is Rohan Kharche.</h1>
+      </div>
+      <div class="intro detail andada-pro">
+        <p>
+          Results-driven Computer Science student with a strong focus on building data-driven solutions for
+          classification, forecasting, and optimization. Skilled in end-to-end model development, performance tuning,
+          and applying ML to real-world problems.<br>Here's my <a
+            href="https://github.com/rohankharche34/About/blob/main/Resume.pdf">resume</a> for more details.
+          <br />Check out my
+          <span class="detail highlight">projects</span> below.
+        </p>
+      </div>
+      <div class="extra--info andada-pro">
+        <div class="upper--bar">
+          <div class="upper--bar content">
+            <div class="content color 1" style="background-color: red"></div>
+            <div class="content color 2" style="background-color: yellow"></div>
+            <div class="content color 3" style="background-color: green"></div>
+          </div>
+        </div>
+        <div class="lower--bar">
+          <div class="location">
+            <p class="location command">Rohan.currentLocation</p>
+            <p class="location info">"Bhopal, India"</p>
+          </div>
+          <div class="currenteducation">
+            <p class="currenteducation command">Rohan.ongoingEducation</p>
+            <p class="currenteducation info">
+              "BTech in Computer Science, VIT Bhopal University, Bhopal"
+            </p>
+          </div>
+          <div class="skills">
+            <p class="skills command">Rohan.skills</p>
+            <p class="skills info">
+              ["Python", "C++", "SQL", "Scikit-learn", "Tensorflow", "Statistical Analysis", "Machine Learning
+              Algorithms", "HTML", "CSS", "Javascript", "Springboot",
+              "Git"]
+            </p>
+            <div class="interests">
+              <p class="interests command">Rohan.interests</p>
+              <p class="interests info">["Badminton", "Reading", "Coding"]</p>
+            </div>
+          </div>
+          <div class="spotify-section">
+            <p class="spotify command">Rohan.currentlyPlaying</p>
+            <div id="spotify-content" class="spotify-content"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main projects" id="projects">
+      <div class="heading">
+        <h2 class="winky-sans">Projects</h2>
+      </div>
+
+      <div class="project-slider">
+        <div class="project-card">
+          <h3 class="project-title">Solar Panel Optimization</h3>
+          <p class="project-description">Designed a predictive model to forecast solar panel efficiency and detect
+            potential degradation using real-time sensor and environmental data. This enables proactive maintenance,
+            reduces downtime, and improves overall energy yield for large-scale solar systems.
+            <br><strong>Skills Used</strong>: Data preprocessing (pandas, NumPy), visualization (seaborn, matplotlib),
+            model tuning (GridSearchCV), ensemble learning with RandomForest, LightGBM, CatBoost, ANN (TensorFlow +
+            SciKeras), and manual stacking with Ridge Regression as the meta-model.
+          </p>
+          <a href="https://github.com/rohankharche34/Solar-panel-performance-optimization" class="project-link"
+            target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Calorie Expenditure Prediction</h3>
+          <p class="project-description">Developed a machine learning model to accurately predict calories burned based
+            on biometric and activity data, enabling better fitness tracking and personalized health insights. The model
+            supports use cases like fitness apps and integration with wearable devices.
+            <br><strong>Skills Used</strong>: Feature engineering, ensemble learning, RandomForest, LGBM, CatBoost,
+            XGBoost, and a StackingRegressor with passthrough for enhanced predictive performance.
+          </p>
+          <a href="https://github.com/rohankharche34/Predict_Calorie-Expenditure" class="project-link"
+            target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Spam Email Classification</h3>
+          <p class="project-description">Built a high-accuracy spam email classifier that effectively filters out
+            unwanted messages, enhancing email security and user experience. The ensemble approach significantly
+            improved prediction performance over individual models.<br>
+            <strong>Skills Used</strong>: Text preprocessing, TF-IDF vectorization, Multinomial Naive Bayes, LinearSVC,
+            Logistic Regression, Hard & Soft Voting Ensemble (Scikit-learn).
+          </p>
+          <a href="https://github.com/rohankharche34/Spam-email-classification" class="project-link"
+            target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Bitcoin Price Prediction</h3>
+          <p class="project-description">Built a predictive web application for Bitcoin price forecasting using a SARIMA
+            model, enabling users to visualize trends and forecast future prices based on historical data. Achieved high
+            accuracy and interpretability, suitable for financial analysis and trading insights.<br>
+            <strong>Skills Used</strong>: Time series forecasting (SARIMAX), data preprocessing, interactive frontend
+            (HTML/CSS/JavaScript), dynamic visualization, Flask web integration, and real-time prediction interface.
+          </p>
+          <a href="https://github.com/rohankharche34/Bitcoin-Price-prediction-" class="project-link"
+            target="_blank">View on GitHub</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="main contact--me" id="contact--me">
+      <div class="contact--me">
+        <div class="contact--me heading">
+          <h2 class="winky-sans">Contact me!</h2>
+        </div>
+        <div class="contact--me info">
+          <ul>
+            <li>
+              <a href="mailto:rohankharche8@gmail.com" draggable="true">rohankharche8@gmail.com</a>
+            </li>
+            <li>||</li>
+            <li>
+              <a href="https://linkedin.com/in/rohan-kharche-34-linked" draggable="true">linkedin</a>
+            </li>
+            <li>||</li>
+            <li>
+              <a href="https://github.com/rohankharche34" draggable="true">github</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Made by Rohan Kharche 2025</p>
+    </footer>
+  </div>
+  <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
