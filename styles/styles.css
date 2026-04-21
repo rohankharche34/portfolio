@@ -288,3 +288,96 @@ footer {
     text-align: center;
     justify-content: center;
 }
+
+.spotify-section .command {
+    color: white;
+    margin: 0;
+    padding: 25px 0 5px 20px;
+}
+
+.spotify-section .command::before {
+    content: ">\A0";
+}
+
+.spotify-content {
+    color: #e7d184;
+    padding: 0 0 15px 20px;
+}
+
+.spotify-content .track-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.spotify-content .track-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.spotify-content .track-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.spotify-content .track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.spotify-content .track-name {
+    color: #fff;
+    font-size: 14px;
+}
+
+.spotify-content .artist-name {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.spotify-content .now-playing {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.spotify-content .album-art {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+}
+
+.spotify-content .track-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.spotify-content .playing-label {
+    color: #1DB954;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.spotify-content .spotify-link {
+    color: #1DB954;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.spotify-content .spotify-login-btn {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.spotify-content .spotify-login-btn:hover {
+    background-color: #1ed760;
+}
