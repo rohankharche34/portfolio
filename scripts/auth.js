@@ -3,6 +3,8 @@ import crypto from 'crypto';
 const clientId = process.env.SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 const redirectUri = process.env.SPOTIFY_REDIRECT_URI || 'http://localhost:5173/callback';
+const SUPABASE_URL = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const scopes = ['user-read-currently-playing', 'user-read-recently-played'];
 
 function generateRandomString(length) {
@@ -101,14 +103,22 @@ async function main() {
     console.log('\n⏳ Exchanging code for tokens...\n');
     const tokens = await getToken(code, codeVerifier);
 
+    const newRefreshToken = tokens.refresh_token;
     console.log('\n✅ Success! Add these to Vercel Environment Variables:\n');
     console.log('─'.repeat(50));
     console.log(`SPOTIFY_CLIENT_ID=${clientId}`);
     console.log(`SPOTIFY_CLIENT_SECRET=${clientSecret}`);
-    console.log(`SPOTIFY_REFRESH_TOKEN=${tokens.refresh_token}`);
+    console.log(`SPOTIFY_REFRESH_TOKEN=${newRefreshToken}`);
     console.log(`SPOTIFY_REDIRECT_URI=${redirectUri}`);
     console.log('─'.repeat(50));
     console.log('\n⚠️  Keep SPOTIFY_CLIENT_SECRET and SPOTIFY_REFRESH_TOKEN secret!\n');
+
+    if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+      console.log('Or insert directly into Supabase:\n');
+      console.log(`INSERT INTO tokens (service, refresh_token) VALUES ('spotify', '${newRefreshToken}')`);
+      console.log(`ON CONFLICT (service) DO UPDATE SET refresh_token = '${newRefreshToken}';\n`);
+      console.log(`Don't forget to add SUPABASE_URL and SUPABASE_ANON_KEY to Vercel!\n`);
+    }
   } catch (error) {
     console.error(`\n❌ Error: ${error.message}\n`);
     process.exit(1);
